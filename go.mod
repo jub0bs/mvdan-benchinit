@@ -1,6 +1,6 @@
-module mvdan.cc/benchinit
+module github.com/jub0bs/benchinit
 
-go 1.24.0
+go 1.23
 
 require github.com/rogpeppe/go-internal v1.14.1
 
