@@ -210,7 +210,7 @@ func doBench(pkgs []*Package, buildflags, testflags []string) error {
 			benchinitResults = append(benchinitResults, match[1])
 		} else if rxFinalResult.MatchString(line) {
 			if len(benchinitResults) != len(input.BenchPkgs) {
-				panic("did not find benchinit's results?")
+				panic(fmt.Sprintf("did not find benchinit's results? %d != %d", len(benchinitResults), len(input.BenchPkgs)))
 			}
 			for _, result := range benchinitResults {
 				fmt.Println(result)
